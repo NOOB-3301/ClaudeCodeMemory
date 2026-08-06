@@ -1,0 +1,10 @@
+{
+  "name": "claude-code-memory-mcp-server",
+  "version": "0.1.0",
+  "description": "MCP server exposing read/write access to the Claude Code Memory vault",
+  "type": "module",
+  "main": "index.js",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0"
+  }
+}

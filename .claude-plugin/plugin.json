@@ -1,0 +1,19 @@
+{
+  "name": "claude-code-memory",
+  "displayName": "Claude Code Memory",
+  "description": "Turns your Claude Code session history into a persistent, queryable knowledge graph (visualized in Obsidian) that Claude automatically consults for architecture, conventions, permissions, and decisions across all your repos.",
+  "version": "0.1.0",
+  "author": {
+    "name": "NOOB-3301"
+  },
+  "homepage": "https://github.com/NOOB-3301/ClaudeCodeMemory",
+  "repository": "https://github.com/NOOB-3301/ClaudeCodeMemory",
+  "license": "MIT",
+  "keywords": [
+    "memory",
+    "knowledge-graph",
+    "obsidian",
+    "mcp",
+    "second-brain"
+  ]
+}
