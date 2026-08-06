@@ -1,0 +1,13 @@
+{
+  "name": "claude-code-memory",
+  "owner": {
+    "name": "NOOB-3301"
+  },
+  "plugins": [
+    {
+      "name": "claude-code-memory",
+      "source": "./",
+      "description": "Turns your Claude Code session history into a persistent, queryable knowledge graph (visualized in Obsidian) that Claude automatically consults for architecture, conventions, permissions, and decisions across all your repos."
+    }
+  ]
+}
