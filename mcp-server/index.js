@@ -6,10 +6,11 @@ import getProjectContext from "./tools/get_project_context.js";
 import searchMemory from "./tools/search_memory.js";
 import getEntity from "./tools/get_entity.js";
 import listRelated from "./tools/list_related.js";
+import listTags from "./tools/list_tags.js";
 import remember from "./tools/remember.js";
 import rememberBatch from "./tools/remember_batch.js";
 
-const tools = [getProjectContext, searchMemory, getEntity, listRelated, remember, rememberBatch];
+const tools = [getProjectContext, searchMemory, getEntity, listRelated, listTags, remember, rememberBatch];
 const toolsByName = Object.fromEntries(tools.map((t) => [t.name, t]));
 
 const server = new Server(

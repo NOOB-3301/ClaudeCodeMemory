@@ -23,7 +23,11 @@ export default {
         items: { type: "string" },
         description: "Titles of other entities this relates to (e.g. the owning project). Creates [[wikilinks]].",
       },
-      tags: { type: "array", items: { type: "string" } },
+      tags: {
+        type: "array",
+        items: { type: "string" },
+        description: "Call list_tags first and prefer reusing an existing tag over inventing a near-duplicate; only add a new tag when no existing one fits.",
+      },
       aliases: { type: "array", items: { type: "string" }, description: "Other names this entity might be referred to by." },
       repo_path: { type: "string", description: "Only for type: project — absolute path used to anchor get_project_context lookups." },
     },

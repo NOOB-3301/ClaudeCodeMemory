@@ -222,6 +222,25 @@ export async function searchMemory(query, type) {
   return results.slice(0, 20);
 }
 
+/**
+ * Aggregates the distinct tag vocabulary already in use across the vault,
+ * so callers (live `remember` calls, the sync skill) can reuse an existing
+ * tag instead of minting a near-duplicate. No fixed vocabulary is enforced
+ * anywhere — this just gives visibility so the choice stays autonomous.
+ */
+export async function listTags() {
+  const index = await loadIndex();
+  const counts = new Map();
+  for (const note of index.notes) {
+    for (const tag of note.tags) {
+      counts.set(tag, (counts.get(tag) || 0) + 1);
+    }
+  }
+  return [...counts.entries()]
+    .map(([tag, count]) => ({ tag, count }))
+    .sort((a, b) => b.count - a.count || a.tag.localeCompare(b.tag));
+}
+
 export async function getEntity(name) {
   const index = await loadIndex();
   const note = resolveEntity(index, name);

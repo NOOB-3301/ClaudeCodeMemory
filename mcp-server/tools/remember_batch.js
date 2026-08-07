@@ -18,7 +18,11 @@ export default {
             title: { type: "string" },
             content: { type: "string" },
             links: { type: "array", items: { type: "string" } },
-            tags: { type: "array", items: { type: "string" } },
+            tags: {
+              type: "array",
+              items: { type: "string" },
+              description: "Call list_tags first and prefer reusing an existing tag over inventing a near-duplicate; only add a new tag when no existing one fits.",
+            },
             aliases: { type: "array", items: { type: "string" } },
             repo_path: { type: "string" },
           },
